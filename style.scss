@@ -1,0 +1,236 @@
+/**
+* Docsie.io sample documentation style
+*/
+
+$sm: 'screen and (min-width: 568px)'; // 568px
+$ism: 'screen and (max-width: 568px)'; // 568px
+$md: 'screen and (min-width: 768px)'; // 768px
+$lg: 'screen and (min-width: 1024px)'; // 1024px
+$xl: 'screen and (min-width: 1280px)'; // 1280px
+$xxl: 'screen and (min-width: 1600px)'; // 1600px
+$textColor: #202a42;
+$linkColor: #007bff;
+$anchorColor: #999;
+$inputBackground: #fff;
+$codeBackground: #f0f8ff;
+$codeBorder: #6b7690;
+$borderColor: #ddd;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=cyrillic,latin-ext');
+#DOCSIE__ROOT {
+    font-family: "Open Sans", Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 1.125em;
+    color: $textColor;
+    @media #{$xl} {
+        font-size: 1.25em;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    article,
+    header,
+    nav {
+        display: block;
+    }
+    input,
+    select,
+    button {
+        color: inherit;
+        padding: .5em .6em;
+        display: inline-block;
+        border: 1px solid $borderColor;
+        background-color: $inputBackground;
+        box-shadow: none;
+        font-size: inherit;
+        border-radius: 4px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    select {
+        height: 2.25em;
+    }
+    button {
+        overflow: visible;
+        text-transform: none;
+        -webkit-appearance: none;
+        margin: 0;
+        text-decoration: none;
+        &:-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+        &:-moz-focusring {
+            outline: 1px dotted ButtonText;
+        }
+    }
+    svg {
+        fill: currentColor;
+        vertical-align: middle;
+        &:not(:root) {
+            overflow: hidden;
+        }
+    }
+    h1,
+    h2 {
+        font-weight: lighter;
+        color: inherit;
+    }
+    h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+    }
+    p {}
+    a {
+        color: $linkColor;
+        background-color: transparent;
+        -webkit-text-decoration-skip: objects;
+    }
+    b {
+        font-weight: bolder;
+    }
+    code {
+        font-family: monospace, monospace;
+        font-size: 1em;
+        padding: 0 0.4em;
+    }
+    img {
+        border-style: none;
+    }
+    figcaption,
+    figure {
+        display: block;
+        margin: 1em 40px;
+    }
+    .pure-docsie {
+        .docsie-nav {
+            a {
+                text-decoration: none;
+                &.pure-link-active {
+                    font-weight: 600;
+                }
+            }
+            >ul {
+                height: 90vh;
+                overflow-x: hidden !important;
+                overflow-y: auto !important;
+                >li {
+                    >ul {
+                        padding: 0 !important;
+                    }
+                    >a {
+                        font-size: 1.2em;
+                    }
+                }
+            }
+            .language-picker,
+            .version-picker {
+                display: block;
+                width: 100%;
+                margin: 1em 0;
+            }
+        }
+        .docsie-doc {
+            padding-left: 0;
+            @media #{$sm} {
+                padding-left: 2em;
+            }
+            @media #{$lg} {
+                padding-left: 3em;
+            }
+            min-width: unset !important;
+            .docsie-title {
+                background-repeat: no-repeat;
+                background-position: -8px 17px;
+                background-clip: border-box;
+                background-size: 0.8em;
+                margin-left: -20px;
+                padding-left: 20px;
+            }
+            .docsie-subtitle {
+                font-size: 1.17em;
+                -webkit-margin-before: 1em;
+                -webkit-margin-after: 1em;
+                -webkit-margin-start: 0px;
+                -webkit-margin-end: 0px;
+                font-weight: lighter;
+                color: lighten(desaturate($textColor, 20%), 30%);
+            }
+            .docsie-content {
+                h2 {
+                    margin-top: 2em;
+                    background-repeat: no-repeat;
+                    background-position: -7px 13px;
+                    background-size: 0.8em;
+                    background-clip: border-box;
+                    margin-left: -20px;
+                    padding-left: 20px;
+                    .docsie-section-anchor {
+                        color: $anchorColor;
+                        margin-right: 0;
+                        @media #{$xl} {
+                            margin-right: -1em;
+                        }
+                    }
+                }
+                p {
+                  
+                }
+                blockquote {
+                    background-color: #fff9e8
+                }
+                code {
+                    background-color: $codeBackground;
+                }
+                code.docsie-codeblock {
+                    border-left: 4px solid $codeBorder;
+                }
+                figure {
+                    margin: 1.5em 0;
+                    border-radius: 2px;
+                }
+                ol {
+                    li>ol {
+                        list-style-type: lower-alpha;
+                        li>ol {
+                            list-style-type: lower-roman;
+                        }
+                    }
+                }
+                dt {
+                    display: inline-block;
+                    padding: 2px 10px;
+                    background-color: $codeBackground;
+                    border-radius: 2px;
+                }
+                dd {}
+            }
+            .docsie-footer {
+                .docsie-footer-nav {
+                    @media #{$lg} {
+                        div {
+                            position: relative;
+                            svg {
+                                position: absolute;
+                                top: 5px
+                            }
+                        }
+                        .docsie-footer-previous {
+                            svg {
+                                margin-left: -1.2em
+                            }
+                        }
+                        .docsie-footer-next {
+                            svg {
+                                margin-right: -1.2em
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
