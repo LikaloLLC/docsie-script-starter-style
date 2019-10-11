@@ -143,12 +143,6 @@ $borderColor: #ddd;
             }
             min-width: unset !important;
             .docsie-title {
-                background-repeat: no-repeat;
-                background-position: -8px 17px;
-                background-clip: border-box;
-                background-size: 0.8em;
-                margin-left: -20px;
-                padding-left: 20px;
             }
             .docsie-subtitle {
                 font-size: 1.17em;
@@ -162,12 +156,6 @@ $borderColor: #ddd;
             .docsie-content {
                 h2 {
                     margin-top: 2em;
-                    background-repeat: no-repeat;
-                    background-position: -7px 13px;
-                    background-size: 0.8em;
-                    background-clip: border-box;
-                    margin-left: -20px;
-                    padding-left: 20px;
                     .docsie-section-anchor {
                         color: $anchorColor;
                         margin-right: 0;
